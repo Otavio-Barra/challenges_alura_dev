@@ -1,0 +1,24 @@
+.header-container__search {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-container__search {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #2d415b;
+    border: none;
+    border-radius: 5px;
+    &::placeholder {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 1144px) {
+  .header-container__search {
+    width: 70%;
+  }
+}
