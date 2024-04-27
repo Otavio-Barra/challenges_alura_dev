@@ -1,0 +1,14 @@
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1144px) {
+  .desktop {
+    display: block;
+    color: $color-font-primary;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

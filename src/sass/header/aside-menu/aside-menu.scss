@@ -1,0 +1,8 @@
+.menu-aside {
+  display: none;
+}
+@media (min-width: 1144px) {
+  .menu-aside {
+    display: block;
+  }
+}

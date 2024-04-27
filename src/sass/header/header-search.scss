@@ -3,16 +3,19 @@
 }
 
 @media (min-width: 768px) {
+  .menu-nav__search-icon {
+    display: none;
+  }
   .header-container__search {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #2d415b;
+    background-color: $input-bg;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     &::placeholder {
-      color: #fff;
-      font-size: 0.8rem;
+      color: $color-font-primary;
+      font-size: 1rem;
     }
   }
 }
@@ -20,5 +23,9 @@
 @media (min-width: 1144px) {
   .header-container__search {
     width: 70%;
+    padding: 1.5rem;
+    &::placeholder {
+      font-size: 1.5rem;
+    }
   }
 }
