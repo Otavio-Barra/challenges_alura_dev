@@ -1,0 +1,19 @@
+.container-elipse {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.elipse {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+.elipse:nth-child(1) {
+  background-color: $elipse-red;
+}
+.elipse:nth-child(2) {
+  background-color: $elipse-yellow;
+}
+.elipse:nth-child(3) {
+  background-color: $elipse-green;
+}

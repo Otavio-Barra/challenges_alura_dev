@@ -1,0 +1,11 @@
+@import "./editor/container-editor.scss";
+@import "./btn-submit-highlight.scss";
+.coder-editor {
+  margin: 5rem 0;
+}
+
+@media (min-width: 1144px) {
+  .coder-editor {
+    margin: 0;
+  }
+}

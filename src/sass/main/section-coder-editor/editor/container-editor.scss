@@ -1,0 +1,9 @@
+@import "./syntax-highlight/container-syntax-highlight.scss";
+@import "./syntax-highlight/elipse.scss";
+@import "./syntax-highlight/textearea-code.scss";
+.coder-editor__container-editor {
+  padding: 3rem;
+  background-color: aqua;
+  border-radius: 0.8rem;
+  margin-bottom: 3rem;
+}

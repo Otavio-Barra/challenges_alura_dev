@@ -214,40 +214,34 @@ html {
     margin-top: 0;
   }
 }
-.coder-editor {
-  margin: 5rem 0;
-}
-
-.coder-editor__container-editor {
-  padding: 3rem;
-  background-color: aqua;
-  border-radius: 0.8rem;
-  margin-bottom: 3rem;
-}
-
 .container-editor__syntax-highlight {
   width: 100%;
   background-color: #141414;
   border-radius: 0.8rem;
   padding: 1.5rem;
 }
-.container-editor__syntax-highlight .container-elipse {
+
+.container-elipse {
   display: flex;
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
-.container-editor__syntax-highlight .elipse {
+
+.elipse {
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
 }
-.container-editor__syntax-highlight .elipse:nth-child(1) {
+
+.elipse:nth-child(1) {
   background-color: #ff5f56;
 }
-.container-editor__syntax-highlight .elipse:nth-child(2) {
+
+.elipse:nth-child(2) {
   background-color: #ffbd2e;
 }
-.container-editor__syntax-highlight .elipse:nth-child(3) {
+
+.elipse:nth-child(3) {
   background-color: #27c93f;
 }
 
@@ -264,6 +258,13 @@ html {
   outline: 0;
 }
 
+.coder-editor__container-editor {
+  padding: 3rem;
+  background-color: aqua;
+  border-radius: 0.8rem;
+  margin-bottom: 3rem;
+}
+
 .coder-editor__btn {
   width: 100%;
   border: none;
@@ -272,6 +273,10 @@ html {
   padding: 1.6rem;
   background-color: rgba(80, 129, 251, 0.0784313725);
   color: #fff;
+}
+
+.coder-editor {
+  margin: 5rem 0;
 }
 
 @media (min-width: 1144px) {
