@@ -12,3 +12,5 @@ btnMenuHamburguer.addEventListener("click", () => {
     btnMenuHamburguer.setAttribute("src", "./src/imgs/menu-hamburguer.png");
   }
 });
+
+console.log(modalNavigation);

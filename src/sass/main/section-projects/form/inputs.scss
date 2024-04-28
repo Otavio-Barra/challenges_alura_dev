@@ -1,0 +1,35 @@
+.form-add-project__save-project {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: $inputs-form-bg;
+  border: none;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 1.4rem;
+}
+
+#description-project {
+  margin-bottom: 3rem;
+  resize: none;
+}
+
+#color-bg-project {
+  padding: 0.2rem;
+  height: 5rem;
+  border: solid 1px #fff;
+  background-color: transparent;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) and (max-width: 1144px) {
+  .projects__form-add-project.personalize {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    #color-bg-project,
+    .form-add-project__save-project {
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -3,6 +3,32 @@
 }
 @media (min-width: 1144px) {
   .menu-aside {
+    position: sticky;
+    top: 8rem;
     display: block;
+    width: 20rem;
+    height: 100%;
+    &.wrapper {
+      margin: 5rem auto;
+    }
+    .menu-aside__title-menu {
+      color: $color-font-primary;
+      letter-spacing: 5px;
+      margin-bottom: 2rem;
+    }
+    .menu-aside__items-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .items-menu__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .item__link {
+          color: $color-font-primary;
+          font-size: 1.6rem;
+        }
+      }
+    }
   }
 }

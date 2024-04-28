@@ -1,0 +1,13 @@
+@import "./title.scss";
+@import "./form/inputs.scss";
+@import "./form/button.scss";
+
+.projects {
+  width: 100%;
+  margin-top: 3rem;
+}
+@media (min-width: 1144px) {
+  .projects {
+    margin-top: 0;
+  }
+}

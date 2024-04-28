@@ -3,9 +3,11 @@
 @import "./menu-nav/menu-nav.scss";
 @import "./header-search.scss";
 @import "./aside-menu/aside-menu.scss";
+
 .header-container {
   display: flex;
   align-items: center;
+  top: 1rem;
   justify-content: space-between;
   gap: 2rem;
 }
