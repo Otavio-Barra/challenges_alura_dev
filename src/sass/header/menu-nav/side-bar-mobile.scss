@@ -1,17 +1,17 @@
 .menu-nav__modal-navigation {
   opacity: 0;
-  // display: none;
   position: absolute;
   top: 4rem;
-  right: -9999px;
   background-color: $input-bg;
+  transform: translateX(-10000px);
   height: 22rem;
   width: 25.4rem;
   border-radius: 0.8rem;
   padding: 1.5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease;
   &.active {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
+    transform: translateX(0);
     opacity: 1;
     right: 0;
   }
