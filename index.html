@@ -8,8 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <title>Alura Dev</title>
-  <link rel="stylesheet" href="./src/css/output.css">
-  <script src="./src/app/main.js" defer></script>
+  <link rel="stylesheet" href="./src/css/output.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/atom-one-dark.min.css" />
+  <script src="./src/app/main.js" type="module" defer></script>
+  <script src="./src/app/highlight.js" type="module" defer></script>
 </head>
 
 <body class="main-bg">
@@ -46,13 +52,14 @@
     <aside class="menu-aside aside">
       <h2 class="menu-aside__title-menu">MENU</h2>
       <ul class="menu-aside__items-menu">
-        <li class="items-menu__item">
+        <li class="items-menu__item actual_page">
           <img src="./src/imgs/icon-code.png" alt="icone pagina principal">
-          <a href="#" class="item__link">Editor de Codigo</a>
+          <a href="#" class="item__link ">Editor de Codigo</a>
         </li>
         <li class="items-menu__item">
-          <img src="./src/imgs/icon-comunit.png" alt="icone comunidade">
-          <a href="#" class="item__link">Comunidade</a>
+
+          <img src="./src/imgs/Icon-comunit.png" alt="icone comunidade">
+          <a href="./comunidade.html" class="item__link">Comunidade</a>
         </li>
       </ul>
     </aside>
@@ -65,11 +72,15 @@
             <div class="elipse"></div>
           </div>
 
-          <textarea name="" id="syntax-highlight" class="syntax-highlight__code"></textarea>
+          <textarea name="" data-text-highlight id="syntax-highlight" class="syntax-highlight__code"></textarea>
         </div>
       </div>
-      <button class="coder-editor__btn">Vizualizar com o highlight</button>
+
+      <button class="coder-editor__btn" data-modal-highlight>Vizualizar com o highlight</button>
+
+
     </section>
+
     <section class="section2 projects">
       <h2 class="projects__title">SEU PROJETO</h2>
       <form action="" class="projects__form-add-project">
@@ -91,6 +102,22 @@
       <button class="projects__submit-form">Salvar Projeto</button>
     </section>
   </main>
+  <div class="modal" data-modal>
+    <div class="coder-editor__container-editor">
+      <button class="closed-modal" data-closed-modal>X</button>
+      <div class="container-editor__syntax-highlight">
+        <div class="container-elipse">
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+        </div>
+
+        <pre><code class="language-javascript">
+ 
+      </code></pre>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

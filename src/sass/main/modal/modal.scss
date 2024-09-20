@@ -1,0 +1,43 @@
+body {
+  position: relative;
+  overflow: hidden;
+}
+.show {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  background-color: #0000006b;
+  width: 100vw;
+  height: 100vh;
+  .closed-modal {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 5px;
+    z-index: 2;
+  }
+
+  .coder-editor__container-editor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    pre code {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .hljs {
+      background-color: $editor-code-bg;
+    }
+  }
+}
