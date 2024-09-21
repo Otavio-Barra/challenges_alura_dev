@@ -1,37 +1,37 @@
-// import "highlight.js/styles/default.css";
-
-// const highlightedCode = hljs.highlight("let teste = 'teste'", {
-//   language: "javascript",
-// }).value;
-
-// console.log(highlightedCode);
-
-// document.querySelector(".language-javascript").innerHTML = highlightedCode;
-document.addEventListener("DOMContentLoaded", (event) => {
-  // document.querySelectorAll("pre code").forEach((block) => {
-  //   console.log(block);
-  //   hljs.highlightElement(block);
-  // });
-});
-
 const btnModal = document.querySelector("[data-modal-highlight]");
 const btnClosedModal = document.querySelector("[data-closed-modal]");
 const modal = document.querySelector("[data-modal]");
 const text = document.querySelector("[data-text-highlight]");
+const language = document.querySelector("[data-select-language]");
+const inputBackgroudSelect = document.querySelector(
+  "[data-backgroud-card-project]"
+);
 
 btnModal.addEventListener("click", (e) => {
-  console.log();
-  document.querySelectorAll("pre code").forEach((block) => {
-    block.innerHTML = text.value;
-    console.log(block);
-
-    hljs.highlightElement(block);
-  });
+  CreateHighlight();
 
   modal.style.display = "block";
 });
 
 btnClosedModal.addEventListener("click", (e) => {
+  let teste = document.querySelector("[data-highlighted]");
+
+  if (teste.dataset.highlighted) {
+    delete teste.dataset.highlighted;
+  }
+
   modal.style.display = "none";
 });
-console.log(modal);
+
+function CreateHighlight() {
+  document.querySelectorAll("pre code").forEach((blockCode) => {
+    SwitchClass(blockCode);
+    blockCode.innerText = text.value;
+    hljs.highlightElement(blockCode);
+  });
+}
+
+function SwitchClass(blockCode) {
+  blockCode.classList.remove(...blockCode.classList);
+  blockCode.classList.add(`language-${language.value}`, "hljs");
+}
