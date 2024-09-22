@@ -3,9 +3,18 @@ const btnClosedModal = document.querySelector("[data-closed-modal]");
 const modal = document.querySelector("[data-modal]");
 const text = document.querySelector("[data-text-highlight]");
 const language = document.querySelector("[data-select-language]");
-const inputBackgroudSelect = document.querySelector(
+const inputBackgroundSelect = document.querySelector(
   "[data-backgroud-card-project]"
 );
+const backgroundEditor = document.querySelectorAll(
+  ".coder-editor__container-editor"
+);
+
+inputBackgroundSelect.addEventListener("input", () => {
+  backgroundEditor.forEach((tag) => {
+    tag.style.backgroundColor = inputBackgroundSelect.value;
+  });
+});
 
 btnModal.addEventListener("click", (e) => {
   CreateHighlight();

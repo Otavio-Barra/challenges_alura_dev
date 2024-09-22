@@ -6,6 +6,15 @@
   border-radius: 0.8rem;
   margin-bottom: 1rem;
   padding: 1.4rem;
+  color: $color-font-primary;
+
+  transition: all 0.3s;
+  &::placeholder {
+    color: $color-font-primary;
+  }
+  &:hover {
+    background-color: $inputs-form-bg-hover;
+  }
 }
 
 #description-project {

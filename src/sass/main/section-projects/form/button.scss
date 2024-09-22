@@ -2,7 +2,15 @@
   width: 100%;
   padding: 1.5rem;
   border-radius: 0.8rem;
-  border: none;
+  border: solid 4px #96b8fd00;
   background-color: $btn-bg;
   font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $btn-bg-hover;
+  }
+  &:active {
+    border: solid 4px #5081fb;
+  }
 }

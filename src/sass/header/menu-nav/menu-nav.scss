@@ -2,4 +2,9 @@
   display: flex;
   gap: 1rem;
   position: relative;
+  padding: 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: #5080fb31;
+  }
 }
