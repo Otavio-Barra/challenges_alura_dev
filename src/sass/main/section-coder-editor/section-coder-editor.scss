@@ -1,9 +1,13 @@
 @import "./editor/container-editor.scss";
 @import "./btn-submit-highlight.scss";
+@import "./cards-projects/wrapper-content.scss";
+
 .coder-editor {
   margin: 5rem 0;
 }
-
+.coder-editor .card-project {
+  margin: 0;
+}
 @media (min-width: 1144px) {
   .coder-editor {
     margin: 0;

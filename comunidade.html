@@ -8,8 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <title>Comunidade Alura Dev</title>
-  <link rel="stylesheet" href="./src/css/output.css">
-  <script src="./src/app/main.js" defer></script>
+  <link rel="stylesheet" href="./src/css/output.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/atom-one-dark.min.css" />
+  <script src="./src/app/main.js" type="module" defer></script>
+  <script src="./src/app/highlight.js" type="module" defer></script>
+
+  <!-- <script src="./src/app/main.js" defer></script> -->
 </head>
 
 <body class="main-bg">
@@ -56,52 +65,61 @@
         </li>
       </ul>
     </aside>
-    <section class="section1 coder-editor">
-      <div class="coder-editor__container-editor">
-        <div class="container-editor__syntax-highlight">
-          <div class="container-elipse">
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-          </div>
+    <section class="coder-editor">
 
-          <textarea name="" id="syntax-highlight" class="syntax-highlight__code"></textarea>
+      <div class="wrapper-card-posts">
+        <div class="coder-editor__container-editor card-project">
+          <div class="container-editor__syntax-highlight">
+            <div class="container-elipse">
+              <div class="elipse"></div>
+              <div class="elipse"></div>
+              <div class="elipse"></div>
+            </div>
+
+
+            <pre><code class="language-javascript hljs">
+          function CreateHighlight() {
+            document.querySelectorAll("pre code").forEach((blockCode) => {
+              SwitchClass(blockCode);
+              blockCode.innerText = text.value;
+              hljs.highlightElement(blockCode);
+            });
+          }
+          
+          function SwitchClass(blockCode) {
+            blockCode.classList.remove(...blockCode.classList);
+            blockCode.classList.add(`language-${language.value}`, "hljs");
+          }
+          
+          
+      </code></pre>
+          </div>
+        </div>
+        <div class="wrapper-content">
+          <h3 class="wrapper-content__title">Titulo do projeto</h3>
+          <p>Descrição do projeto</p>
+          <div class="icons-user">
+            <div class="wrapper-icons">
+              <div class="comments">
+                <img src="./src/imgs/icon-comment.png" alt="icone de comentario">
+                <p>9</p>
+              </div>
+              <div class="likes">
+                <img src="./src/imgs/ion-like.png" alt="icone de like">
+                <p>9</p>
+              </div>
+            </div>
+
+            <div class="user">
+              <img src="./src/imgs/Photo.png" alt="Foto usuario">
+              <p>@Harry</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="coder-editor__container-editor">
-        <div class="container-editor__syntax-highlight">
-          <div class="container-elipse">
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-          </div>
 
-          <textarea name="" id="syntax-highlight" class="syntax-highlight__code"></textarea>
-        </div>
-      </div>
-      <div class="coder-editor__container-editor">
-        <div class="container-editor__syntax-highlight">
-          <div class="container-elipse">
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-          </div>
 
-          <textarea name="" id="syntax-highlight" class="syntax-highlight__code"></textarea>
-        </div>
-      </div>
-      <div class="coder-editor__container-editor">
-        <div class="container-editor__syntax-highlight">
-          <div class="container-elipse">
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-          </div>
 
-          <textarea name="" id="syntax-highlight" class="syntax-highlight__code"></textarea>
-        </div>
-      </div>
-      <button class="coder-editor__btn">Vizualizar com o highlight</button>
     </section>
 
   </main>

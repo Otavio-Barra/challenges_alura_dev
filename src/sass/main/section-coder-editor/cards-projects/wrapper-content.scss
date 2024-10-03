@@ -1,0 +1,32 @@
+.wrapper-content {
+  background-color: #00000024;
+  color: $color-font-primary;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .icons-user {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+    .comments,
+    .likes,
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 24px;
+      }
+    }
+    .wrapper-icons {
+      display: flex;
+      gap: 3rem;
+    }
+  }
+}
