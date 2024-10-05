@@ -2,6 +2,11 @@
 @import "./section-coder-editor/section-coder-editor.scss";
 
 @media (min-width: 1144px) {
+  .main-content.communit {
+    grid-template-columns: 14.5% 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "aside section1 ";
+  }
   .main-content {
     &.wrapper {
       margin: 5rem auto;
@@ -14,6 +19,7 @@
       "aside section1 section2"
       "aside section1 section2";
   }
+
   .aside {
     grid-area: aside;
   }

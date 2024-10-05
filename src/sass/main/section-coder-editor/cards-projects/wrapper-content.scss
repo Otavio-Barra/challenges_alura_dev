@@ -4,29 +4,68 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  // width: 100%;
+
+  .wrapper-content__title {
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .text {
+    font-size: 1.6rem;
+  }
 
   .icons-user {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 2rem;
+
+    padding-top: 3rem;
 
     .comments,
     .likes,
     .user {
+      cursor: pointer;
       display: flex;
       align-items: center;
       gap: 1rem;
+      transition: ease-in-out 0.3s;
+      padding: 0.5rem;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $inputs-form-bg;
+      }
 
       img {
-        width: 24px;
+        width: 20px;
+      }
+      .user {
+        img {
+          width: 24px;
+        }
       }
     }
     .wrapper-icons {
       display: flex;
       gap: 3rem;
     }
+  }
+}
+
+.coder-editor.communit {
+}
+.wrapper-card-posts {
+  // width: 100%;
+  margin-bottom: 4rem;
+}
+@media (min-width: 1420px) {
+  .coder-editor.communit {
+    margin-bottom: 0;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .wrapper-card-posts {
+    margin-bottom: 0;
   }
 }
